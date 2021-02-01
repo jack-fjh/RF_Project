@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on darwin)" generated="20210131 22:59:30.879" rpa="false">
+<suite id="s1" name="6 Res" source="/Users/fengjiahui/PycharmProjects/pythonProject/RF_Project/6_res.robot">
+<test id="s1-t1" name="test1">
+<kw name="with args">
+<arguments>
+<arg>username=alex</arg>
+<arg>password=1</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<status status="PASS" starttime="20210131 22:59:30.889" endtime="20210131 22:59:30.889"></status>
+</kw>
+<status status="PASS" starttime="20210131 22:59:30.888" endtime="20210131 22:59:30.889"></status>
+</kw>
+<status status="PASS" starttime="20210131 22:59:30.888" endtime="20210131 22:59:30.889" critical="yes"></status>
+</test>
+<test id="s1-t2" name="test2">
+<kw name="with dict">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>key=value</arg>
+<arg>foo=bar</arg>
+</arguments>
+<assign>
+<var>&amp;{dict}</var>
+</assign>
+<msg timestamp="20210131 22:59:30.890" level="INFO">&amp;{dict} = { key=value | foo=bar }</msg>
+<status status="PASS" starttime="20210131 22:59:30.889" endtime="20210131 22:59:30.890"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<status status="PASS" starttime="20210131 22:59:30.890" endtime="20210131 22:59:30.890"></status>
+</kw>
+<status status="PASS" starttime="20210131 22:59:30.889" endtime="20210131 22:59:30.890"></status>
+</kw>
+<status status="PASS" starttime="20210131 22:59:30.889" endtime="20210131 22:59:30.890" critical="yes"></status>
+</test>
+<test id="s1-t3" name="test3">
+<kw name="with list">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>a</arg>
+<arg>b</arg>
+<arg>c</arg>
+</arguments>
+<assign>
+<var>@{list}</var>
+</assign>
+<msg timestamp="20210131 22:59:30.890" level="INFO">@{list} = [ a | b | c ]</msg>
+<status status="PASS" starttime="20210131 22:59:30.890" endtime="20210131 22:59:30.890"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${list}</arg>
+</arguments>
+<status status="PASS" starttime="20210131 22:59:30.890" endtime="20210131 22:59:30.890"></status>
+</kw>
+<status status="PASS" starttime="20210131 22:59:30.890" endtime="20210131 22:59:30.890"></status>
+</kw>
+<status status="PASS" starttime="20210131 22:59:30.890" endtime="20210131 22:59:30.890" critical="yes"></status>
+</test>
+<doc>公共操作-登录</doc>
+<status status="PASS" starttime="20210131 22:59:30.880" endtime="20210131 22:59:30.891"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="6 Res">6 Res</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

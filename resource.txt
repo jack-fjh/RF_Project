@@ -1,0 +1,27 @@
+*** Settings ***
+Documentation               公共操作-登录
+
+
+Library                     SeleniumLibrary
+
+*** Variables ***
+${LoginURL}             http://49.233.108.117:3000/signin
+
+*** Keywords ***
+用户登录到系统
+    [Arguments]                 ${username}         ${password}
+    Open Browser                ${loginURL}       chrome
+    Input Text                  id:name             ${username}
+    Input Password              id:pass             ${password}
+    Click Element              css:input[class="span-primary"]
+    ${usernametext}             Get Text                    css:span>a[class="dark"]
+    [Return]                    ${usernametext}
+
+用户发帖
+    Click Element               css:select[id="tab-value"]>option:nth-child(2)
+    Input Text                  id:title            hello world
+    Set Focus To Element        xpath://div[@class='CodeMirror-scroll']
+    Press Keys                  xpath://div[@class='CodeMirror-scroll']         alex
+
+
+
