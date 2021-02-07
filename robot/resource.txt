@@ -20,7 +20,9 @@ ${LoginURL}             http://49.233.108.117:3000/signin
 用户发帖
     Click Element               css:select[id="tab-value"]>option:nth-child(2)
     Input Text                  id:title            hello world
+    #给文本框一个焦点
     Set Focus To Element        xpath://div[@class='CodeMirror-scroll']
+    #设定了焦点后，使用press key模拟用户按键盘
     Press Keys                  xpath://div[@class='CodeMirror-scroll']         alex
 
 
